@@ -1,0 +1,18 @@
+#!/bin/bash
+export HUBOT_GRAFANA_S3_BUCKET=test
+export HUBOT_GRAFANA_S3_ENDPOINT=172.30.49.35
+export HUBOT_GRAFANA_HOST=https://lp-grafana.luxoft.com
+export HUBOT_GRAFANA_S3_ACCESS_KEY_ID=G6VWZ3RH7F249VELMAK5
+export HUBOT_GRAFANA_S3_SECRET_ACCESS_KEY=/ux0v2pjD8+8jRrDqG8hfkAHqXCeTUAHZ4iftQj8
+export HUBOT_GRAFANA_S3_PORT=9000
+export HUBOT_GRAFANA_S3_STYLE=path
+export HUBOT_HIPCHAT_HOST=hipchat.luxoft.com
+export HUBOT_HIPCHAT_JID=1_3134@chat.btf.hipchat.com
+export HUBOT_HIPCHAT_PASSWORD=QazWsx123
+export HUBOT_HIPCHAT_ROOMS=1_test_room_for_bot@conf.btf.hipchat.com
+export HUBOT_HIPCHAT_JOIN_PUBLIC_ROOMS=false
+export HUBOT_HIPCHAT_JOIN_ROOMS_ON_INVITE=false
+export EXPRESS_PORT=8000
+export HUBOT_HIPCHAT_XMPP_DOMAIN=btf.hipchat.com
+export NODE_TLS_REJECT_UNAUTHORIZED=0
+./bin/hubot -a hipchat
