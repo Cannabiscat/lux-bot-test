@@ -55,6 +55,7 @@ module.exports = (robot) ->
   s3_region = process.env.HUBOT_GRAFANA_S3_REGION or 'us-standard'
   s3_port = process.env.HUBOT_GRAFANA_S3_PORT if process.env.HUBOT_GRAFANA_S3_PORT
   slack_token = process.env.HUBOT_SLACK_TOKEN
+  hipchatSendToken = process.env.HIPCHAT_SEND_TOKEN
   site = () ->
     # prioritize S3 no matter if adpater is slack
     if (s3_bucket && s3_access_key && s3_secret_key)
@@ -344,7 +345,7 @@ module.exports = (robot) ->
           fs.readFile title2, (err, data) ->
             request.post {
               'url': "https://hipchat.luxoft.com/v2/#{targetName}/share/file"
-              'headers': 'Authorization': 'Bearer cLKh1u6i2FWu9pQFAIoAph3YamulKOYNztgwWDCi'
+              'headers': 'Authorization': 'Bearer ' + hipchatSendToken
               'multipart': [
                 {
                   'Content-Type': 'application/json; charset=UTF-8'
